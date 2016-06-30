@@ -26,7 +26,7 @@ $("#logInForm").submit(function (e) {
 	console.log(password);
 	$.ajax({
 		method: 'POST',
-		url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/',
+		url: 'http://parent-teacher-connection.herokuapp.com/api/api-token-auth/',
 		data: {
 			username: username,
 			password: password,
@@ -88,13 +88,13 @@ $("#logInForm").submit(function (e) {
 			}
 		},
 		success: function() {
-			url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
+			url: 'http://parent-teacher-connection.herokuapp.com/api/api-token-auth/'
 		}
 	});
 	var LogInParentModel = new UserParent();
 
 	var UserParentCollection = Backbone.Collection.extend({
 		model: LogInParentModel,
-		url: 'https://murmuring-sands-9831.herokuapp.com/api/api-token-auth/'
+		url: 'http://parent-teacher-connection.herokuapp.com/api/api-token-auth/'
 	});
 });
